@@ -1,5 +1,8 @@
+{% extends "layout.html" %}
+{% block body %}
 <form action="" method=POST>
-    <p><input name="username" value=""></p>
-    <p><input name="password" type="password" value=""></p>
+    <p><label>username:</label><input name="username" value=""></p>
+    <p><label>password:</label><input name="password" type="password" value=""></p>
     <p><button type="submit">Login</button></p>
 </form>
+{% endblock %}

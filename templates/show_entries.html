@@ -1,22 +1,19 @@
-{% if session['islogin']: %}
-    <h1>hello {{session.username}}</h1>
-{% else: %}
-    <h1>loged out</h1>
+{% extends "layout.html" %}
+{% block body %}
+{% if session.islogin %}
+  <form action="{{ url_for('add_entry') }}" method=post class=add-entry>
+      <dl>
+        <dt>Title:
+        <dd><input type=text size=30 name=title>
+        <dt>Text:
+        <dd><textarea name=text rows=5 cols=40></textarea>
+        <dd><input type=submit value=Share>
+      </dl>
+    </form>
 {% endif %}
-
-
-<!-- if user login ,show this block -->
-{% if session.islogin: %}
-<form method="POST" action={{url_for('add_entry')}}>
-    <p><input name="title" value=""></p>
-    <p><input name="text" value=""></p>
-    <p><button type="submit">share</button></p>
-</form>
-{% endif %}
-
-
-<h1>show entries</h1>
-{% for i in entries %}
-<h1>{{i.title}}</h1>
-<h1>{{i.text}}</h1>
+{% for entry in entries %}
+    <li><h2>{{entry.id}}-{{ entry.title }}</h2>{{ entry.text|safe }}
+{% else %}
+    <li><em>Unbelievable.  No entries here so far</em>
 {% endfor %}
+{% endblock %}

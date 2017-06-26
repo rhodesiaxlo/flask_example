@@ -1,0 +1,18 @@
+<!doctype html>
+<title>Flaskr</title>
+
+<!--css -->
+<link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+
+<div class="page">
+    <h1>Flaskr</h1>
+    <div class="metanav">
+        <!-- if user not login,show login button,otherwise ,show logout button -->
+        {% if not session.islogin %}
+            <a href="{{url_for('login')}}">login in</a>
+        {% else %}
+            <p>Welcome {{session.username}}! <a href="{{url_for('logout')}}">login out</a></p>
+        {% endif %}
+    </div>
+    {% block body %}{% endblock %}
+</div>
