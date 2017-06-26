@@ -1,6 +1,6 @@
 from flask import Flask,render_template,request,make_response,url_for,redirect
 from flask import session
-from flask import  _app_ctx_stack,g
+from flask import  _app_ctx_stack,g,flash
 import os
 import sqlite3
 
@@ -35,6 +35,7 @@ def show_entries():
 def add_entry():
     g.db.execute('insert into entries (title,text) values (?,?)',[request.form['title'],request.form['text']])
     g.db.commit()
+    flash("New entry successfully posted !")
     return redirect(url_for('show_entries'))
 
 @app.route('/login', methods=['GET','POST'])
@@ -47,6 +48,12 @@ def login():
             session['username'] = request.form['username']
             session['islogin'] = True
             return redirect(url_for('show_entries'))
+        elif request.form['username'] != 'admin':
+            flash("username incorrect")
+        elif request.form['password'] != 'admin':
+            flash("password incorrect")
+        else:
+            pass
     return render_template('login.html')
 
 @app.route('/logout')

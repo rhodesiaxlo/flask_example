@@ -14,5 +14,8 @@
             <p>Welcome {{session.username}}! <a href="{{url_for('logout')}}">login out</a></p>
         {% endif %}
     </div>
+    {% for message in get_flashed_messages() %}
+        <div class="flash">{{message}}</div>
+    {% endfor %}
     {% block body %}{% endblock %}
 </div>
