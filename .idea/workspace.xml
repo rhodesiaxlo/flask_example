@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="377a41f7-c3ae-4193-a22b-0b0f437d8bd7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/show_entries.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.py" afterPath="$PROJECT_DIR$/index.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,9 +17,11 @@
       <file leaf-file-name="index.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-              <folding />
+            <state relative-caret-position="234">
+              <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#78#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -35,9 +34,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/index.py" />
         <option value="$PROJECT_DIR$/templates/show_entries.html" />
         <option value="$PROJECT_DIR$/templates/login.html" />
+        <option value="$PROJECT_DIR$/index.py" />
       </list>
     </option>
   </component>
@@ -280,9 +279,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="44" lean-forward="true" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
-          <folding />
+        <state relative-caret-position="234">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#78#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,8 +1,16 @@
 from flask import Flask,render_template,request,make_response,url_for,redirect
-
+import os
 
 # Flask object
 app = Flask(__name__)
+
+# config
+DATABASE='test2.db'
+DEBUG = True
+SECRET_KEY = os.urandom(24)
+# load configuration
+app.config.from_object(__name__)
+app.config.from_envvar("FLASK_SETTING",silent=True)
 
 # route
 @app.route('/')
