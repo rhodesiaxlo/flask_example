@@ -1,1 +1,22 @@
+{% if session['islogin']: %}
+    <h1>hello {{session.username}}</h1>
+{% else: %}
+    <h1>loged out</h1>
+{% endif %}
+
+
+<!-- if user login ,show this block -->
+{% if session.islogin: %}
+<form method="POST" action={{url_for('add_entry')}}>
+    <p><input name="title" value=""></p>
+    <p><input name="text" value=""></p>
+    <p><button type="submit">share</button></p>
+</form>
+{% endif %}
+
+
 <h1>show entries</h1>
+{% for i in entries %}
+<h1>{{i.title}}</h1>
+<h1>{{i.text}}</h1>
+{% endfor %}
